@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/paradogs/Dropbox/Структуры и алгоритмы/3 курс 1 семестр/Graph/Graph.h
+iostream
+-
+QList.h
+/home/paradogs/Dropbox/Структуры и алгоритмы/3 курс 1 семестр/Graph/QList.h
+
+/home/paradogs/Dropbox/Структуры и алгоритмы/3 курс 1 семестр/Graph/QList.h
+
+/home/paradogs/Dropbox/Структуры и алгоритмы/3 курс 1 семестр/Graph/main.cpp
+iostream
+-
+Graph.h
+/home/paradogs/Dropbox/Структуры и алгоритмы/3 курс 1 семестр/Graph/Graph.h
+

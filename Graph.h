@@ -124,11 +124,27 @@ private:
         return minColor;
     }
 
+    // Последняя вершина, смежная в x_star в {x_1, ..., x_(i_star - 1)} (упорядочено, согласно главному списку)
+    Node* getLastVertex(Node* x_star, int i_star)
+    {
+        if (i_star == 1) return root;
+        Node* x_k = getVertex(x_star->key)->right;
+        Node* prev = x_k;
+        while (x_k != nullptr)
+        {
+            if (vertexNum(x_k->key) < i_star && vertexNum(x_k->key) > vertexNum(prev->key)) prev = x_k;
+            x_k = x_k->right;
+        }
+        if (prev == getVertex(x_star->key)->right) return getLastVertex(x_star, i_star-1);
+        x_k = getVertex(prev->key);
+        return x_k;
+    }
+
     void comeback(Node* x_star, int colors[], int chromaticNumber)
     {
         if (x_star == root) return;
 
-        Node* x_k = x_star->right;
+        /*Node* x_k = x_star->right;
         int i_star = vertexNum(x_star->key);
         Node* prev = x_k;
         while (x_k != nullptr && vertexNum(x_k->key) < i_star)
@@ -136,7 +152,9 @@ private:
             prev = x_k;
             x_k = x_k->right;
         }
-        x_k = getVertex(prev->key); // Последняя вершина, смежная в x_star в {x_1, ..., x_(i_star - 1)}
+        x_k = getVertex(prev->key); // Последняя вершина, смежная в x_star в {x_1, ..., x_(i_star - 1)}*/
+        Node* x_k = getLastVertex(x_star, vertexNum(x_star->key)); //
+
         int i_k = vertexNum(x_k->key);
 
         int j_k = colors[i_k]; // x_k окрашена в цвет j_k

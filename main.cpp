@@ -12,7 +12,8 @@ int main()
      * \ \/ /
      *   .
      */
-    /*graph.addEdge(1,4);
+    
+    graph.addEdge(1,4);
     graph.addEdge(1,5);
     graph.addEdge(4,3);
     graph.addEdge(4,6);
@@ -20,7 +21,7 @@ int main()
     graph.addEdge(5,6);
     graph.addEdge(5,2);
     graph.addEdge(3,6);
-    graph.addEdge(2,6);*/
+    graph.addEdge(2,6);
 
     /*другой граф*/
     /*graph.addEdge(5,4);

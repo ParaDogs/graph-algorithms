@@ -1,2 +1,2 @@
 # Graph
-Graph algorithms
+Graph algorithms (undirected graph)
